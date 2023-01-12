@@ -14,7 +14,7 @@ The only requirements for the reproduciton are a conda installation and this rep
 
 1. Get a copy of this repository and open a shell in it.
 2. Set up the conda environment using the conda environment definition in `reproduce-single-cell-proteomics.yaml`.
-This will create an environment named `scprep`.
+   This will create an environment named `scprep`.
 3. Activate the new conda environment
 4. Start JupyterLab
 5. Open `TSP_cell_cycle_analysis.ipynb` in JupyterLab
@@ -74,6 +74,7 @@ This repository contains analyses done for [Ultra-high sensitivity mass spectrom
 ## License
 
 This repository is licensed under the BSD-3 clause license.
+
 The license for my contributinos resides in `LICENSE-fabianegli` while the original code's license is in `LICENSE`.
 
 ## Comments
