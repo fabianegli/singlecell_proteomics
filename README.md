@@ -36,6 +36,16 @@ Note of caution: while this repository holds all the information to reproduce th
 5. Open `TSP_cell_cycle_analysis.ipynb` in JupyterLab
 6. Run the code.
 
+For convenience step 1.-4. all in one:
+
+```shell
+git clone https://github.com/fabianegli/singlecell_proteomics
+cd singlecell_proteomics
+conda env create --file reproduce-single-cell-proteomics.yaml
+conda activate scprep
+jupyter lab
+```
+
 ## Reference
 
 This repository contains analyses done for [Ultra-high sensitivity mass spectrometry quantifies single-cell proteome changes upon perturbation](https://doi.org/10.15252/msb.202110798), A Brunner, ..., M Mann, Molecular Systems Biology (2022).
