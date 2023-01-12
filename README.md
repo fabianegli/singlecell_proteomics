@@ -77,6 +77,8 @@ This repository is licensed under the BSD-3 clause license.
 
 The license for my contributinos resides in `LICENSE-fabianegli` while the original code's license is in `LICENSE`.
 
+The licenses of the bundled data is noted in the "The budled data in `data.tar.gz`" section above.
+
 ## Comments
 
 The effort to make this repository's code reproducible was carried out on MacOS 11.7.2. It has yet to be tested on other platforms.
