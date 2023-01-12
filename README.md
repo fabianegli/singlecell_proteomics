@@ -12,9 +12,14 @@ Note of caution: while this repository holds all the information to reproduce th
 
 ### Step by Step instructions
 
-1. Clone this repository.
+1. Get a copy of this repository and open a shell in it.
 
-   `git clone https://github.com/fabianegli/singlecell_proteomics`
+   e.g. with
+
+   ```shell
+   git clone https://github.com/fabianegli/singlecell_proteomics
+   cd singlecell_proteomics
+   ```
 
 2. Set up the conda environment for the reproduction (the following command will create an environment named `scprep`)
 
