@@ -35,6 +35,38 @@ conda activate scprep
 jupyter lab
 ```
 
+### The budled data in `data.tar.gz`
+
+Much care has been given to the bundling of all data required for successful reproduction.
+The following sources were used:
+
+From PRIDE project [PXD024043] the files `20210919_DIANN_SingleCellOutput.pg_matrix_cellcyclepred.tsv` and `20210919_DIANN_SingleCellOutput.pg_matrix_notnormalized.tsv` in the
+https://ftp.pride.ebi.ac.uk/pride/data/archive/2022/02/PXD024043/DIANN1.8_SingleCells_CellCycle.7z archive licensed under the [Creative Commons Public Domain (CC0)](https://creativecommons.org/share-your-work/public-domain/cc0/).
+
+All other files in `data.tar.gz` originate from [Gene Expression Omnibus (GEO)](https://www.ncbi.nlm.nih.gov/gds/) as downloaded in January 2023.
+The directories `GSE129447_RAW` and `GSE142277_RAW` with their respective contents were downloaded from https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE129447&format=file and https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE142277&format=file respectively as compressed folders and their contents subsequently extracted.
+The files `GSM4226257_out_gene_exon_tagged.dge_exonsds_046.txt` and `GSM4226257_out_gene_exon_tagged.dge_intronsds_046.txt` in `GSM4226257_RAW` were individually downloaded and extracted from https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM4226257&format=file&file=GSM4226257%5Fout%5Fgene%5Fexon%5Ftagged%2Edge%5Fexonsds%5F046%2Etxt%2Egz and https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM4226257&format=file&file=GSM4226257%5Fout%5Fgene%5Fexon%5Ftagged%2Edge%5Fintronsds%5F046%2Etxt%2Egz respectively.
+
+The contents of `data.tar.gz`
+
+```
+data
+├── 20210919_DIANN_SingleCellOutput.pg_matrix_cellcyclepred.tsv
+├── 20210919_DIANN_SingleCellOutput.pg_matrix_notnormalized.tsv
+├── GSE129447_RAW
+│   ├── GSM3713084_HeLa_1.txt
+│   ├── GSM3713085_HeLa_2.txt
+│   └── GSM3713086_HeLa_3.txt
+├── GSE142277_RAW
+│   ├── GSM4224315_out_gene_exon_tagged.dge_exonssf002_WT.txt
+│   ├── GSM4224315_out_gene_exon_tagged.dge_intronssf002_WT.txt
+│   ├── GSM4224316_out_gene_exon_tagged.dge_exonssf002_KO.txt
+│   └── GSM4224316_out_gene_exon_tagged.dge_intronssf002_KO.txt
+└── GSM4226257_RAW
+    ├── GSM4226257_out_gene_exon_tagged.dge_exonsds_046.txt
+    └── GSM4226257_out_gene_exon_tagged.dge_intronsds_046.txt
+```
+
 ## Reference
 
 This repository contains analyses done for [Ultra-high sensitivity mass spectrometry quantifies single-cell proteome changes upon perturbation](https://doi.org/10.15252/msb.202110798), A Brunner, ..., M Mann, Molecular Systems Biology (2022).
