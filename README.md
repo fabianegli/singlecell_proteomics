@@ -10,7 +10,7 @@ The analyses were performed in Python and heavily use [scanpy](https://scanpy.re
 
 The only requirements for the reproduciton are a conda installation and this repository.
 
-### Step by Step instructions
+### Step by Step instructions for `conda`
 
 1. Get a copy of this repository and open a shell in it.
 2. Set up the conda environment using the conda environment definition in `reproduce-single-cell-proteomics.yaml`.
@@ -35,7 +35,19 @@ conda activate scprep
 jupyter lab
 ```
 
-### The budled data in `data.tar.gz`
+## Step by Step instructions for Docker
+
+For this to work Docker needs to be installed on the system.
+
+The `Dockerfile` in this repository sets up docker with a 
+
+- Build the Docker image with `docker build .`
+- Run the Docker image with `docker run -it -p 8888:8888 -v "${PWD}":"/tscp/" tscp`
+- Point the browser to http://127.0.0.1:8888/
+- Open the tscp folder in the Jupyter lab navigation, it contians the notebook.
+- Open and run the notebook.
+
+## The budled data in `data.tar.gz`
 
 Much care has been given to the bundling of all data required for successful reproduction.
 The following sources were used:
