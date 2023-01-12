@@ -13,30 +13,13 @@ Note of caution: while this repository holds all the information to reproduce th
 ### Step by Step instructions
 
 1. Get a copy of this repository and open a shell in it.
-
-   e.g. with
-
-   ```shell
-   git clone https://github.com/fabianegli/singlecell_proteomics
-   cd singlecell_proteomics
-   ```
-
 2. Set up the conda environment for the reproduction (the following command will create an environment named `scprep`)
-
-   `conda env create --file reproduce-single-cell-proteomics.yaml`
-
 3. Activate the new conda environment
-
-   `conda activate scprep`
-
 4. Start JupyterLab
-
-   `jupyter lab`
-
 5. Open `TSP_cell_cycle_analysis.ipynb` in JupyterLab
 6. Run the code.
 
-For convenience step 1.-4. all in one:
+For convenience step 1.-4. as shell commands:
 
 ```shell
 git clone https://github.com/fabianegli/singlecell_proteomics
