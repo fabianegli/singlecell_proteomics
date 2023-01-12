@@ -13,7 +13,8 @@ Note of caution: while this repository holds all the information to reproduce th
 ### Step by Step instructions
 
 1. Get a copy of this repository and open a shell in it.
-2. Set up the conda environment for the reproduction (the following command will create an environment named `scprep`)
+2. Set up the conda environment using the conda environment definition in `reproduce-single-cell-proteomics.yaml`.
+This will create an environment named `scprep`.
 3. Activate the new conda environment
 4. Start JupyterLab
 5. Open `TSP_cell_cycle_analysis.ipynb` in JupyterLab
