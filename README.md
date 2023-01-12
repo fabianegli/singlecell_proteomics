@@ -1,4 +1,4 @@
-**NB: This is repository aims to provide everything needed to rerun the original Jupyter notebook. I am not connected to the [Theis Lab](https://github.com/theislab) and work on this repository in my free time.**
+**NB: This is repository aims to provide everything needed to rerun the original Jupyter notebook. I am not connected to the [Theis Lab](https://github.com/theislab) and work on this repository in my free time. There is not guarantee - implied or expressed - that this repository will allow a perfect reproduction of the results.**
 
 # Single-cell proteomics analysis in Python
 
@@ -9,8 +9,6 @@ The analyses were performed in Python and heavily use [scanpy](https://scanpy.re
 ### Requirements
 
 The only requirements for the reproduciton are a conda installation and this repository.
-
-Note of caution: while this repository holds all the information to reproduce the plots, there might still be subtle differences that escaped me.
 
 ### Step by Step instructions
 
@@ -50,3 +48,5 @@ The license for my contributinos resides in `LICENSE-fabianegli` while the origi
 
 The effort to make this repository's code reproducible was carried out on MacOS 11.7.2. It has yet to be tested on other platforms.
 `conda-env-for-reproduction-on-MacOS1172.yaml` contains the exported conda environment - this file can be used to set up the environment exactly the same, but it will most probably not work if you use another OS than what generated it.
+
+While this repository holds all the information to reproduce the plots, there might still be subtle differences that escaped or that are outside my purview to change.
