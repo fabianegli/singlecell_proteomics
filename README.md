@@ -33,3 +33,8 @@ The analyses were performed in Python and heavily use [scanpy](https://scanpy.re
 
 This repository is licensed under the BSD-3 clause license.
 The license for my contributinos resides in `LICENSE-fabianegli` while the original code's license is in `LICENSE`.
+
+## Comments
+
+The effort to make this repository's code reproducible was carried out on MacOS 11.7.2. It has yet to be tested on other platforms.
+`conda-env-for-reproduction-on-MacOS1172.yaml` contains the exported conda environment - this file can be used to set up the environment exactly the same, but it will most probably not work if you use another OS than what generated it.
