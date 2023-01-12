@@ -23,11 +23,11 @@ This will create an environment named `scprep`.
 For convenience step 1.-4. as shell commands:
 
 ```shell
-git clone https://github.com/fabianegli/singlecell_proteomics
-cd singlecell_proteomics
-conda env create --file reproduce-single-cell-proteomics.yaml
-conda activate scprep
-jupyter lab
+git clone https://github.com/fabianegli/singlecell_proteomics  # Step 1.
+cd singlecell_proteomics                                       # Step 1.
+conda env create --file reproduce-single-cell-proteomics.yaml  # Step 2.
+conda activate scprep                                          # Step 3.
+jupyter lab                                                    # Step 4.
 ```
 
 ## Reference
