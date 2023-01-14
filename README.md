@@ -51,6 +51,19 @@ The `Dockerfile` in this repository can be used as follows to run the notebook:
 
 While it has been tested with Podman, it may also work with Docker. To run it with Docker simply change the `podman` with `docker`.
 
+### Non-interactive
+For a non-interactive reproduction one can use the following command:
+
+```
+podman run -it -v "${PWD}":"/tscp/" tscp \
+  bash -c \
+    "sed -i 's/conda-env-tissue-py/python/' /tscp/TSP_cell_cycle_analysis.ipynb; \
+      python -m nbconvert \
+      --execute \
+      --to notebook /tscp/TSP_cell_cycle_analysis.ipynb \
+      --output=/tscp/TSP_cell_cycle_analysis-reproduced.ipynb"
+```
+
 ## The budled data in `data.tar.gz`
 
 Much care has been given to the bundling of all data required for successful reproduction.
