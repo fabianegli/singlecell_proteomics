@@ -43,13 +43,15 @@ The reproduction with containers has been tested with [`podman`](https://podman.
 It may also work with other containerization technologies that can build containers from Dockerfile like Docker or Singularity.
 e.g. for Docker it should be possible to run the same analysis by simply changeing `podman` to `docker`.
 
+Both, interactive and non-interactive methods to reproduce the analysis require a container image.
+It can be built with `podman build --tag tscp .` run in the root of a clone of this repository.
+
 ### Interactive
 
 For this to work `podman` needs to be installed on the system.
 
 The `Dockerfile` in this repository can be used as follows to run the notebook:
 
-- Build the Podman image with `podman build .`
 - Unpack the bundled data with `podman run -it -v "${PWD}":"/tscp/" tscp bash -c "cd tscp/; python prepare_data.py"`
 - Run the Podman image with `podman run -it -p 8888:8888 -v "${PWD}":"/tscp/" tscp`
 - Point the browser to link in shown in the terminal starting with `http://127.0.0.1:8888/`
