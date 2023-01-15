@@ -104,8 +104,6 @@ This repository contains analyses done for [Ultra-high sensitivity mass spectrom
 
 This repository is licensed under the BSD-3 clause license.
 
-The license for my contributinos resides in `LICENSE-fabianegli` while the original code's license is in `LICENSE`.
-
 The licenses of the bundled data is noted in the "The budled data in `data.tar.gz`" section above.
 
 ## Comments
