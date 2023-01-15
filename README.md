@@ -31,7 +31,9 @@ cd singlecell_proteomics
 conda env create --file reproduce-single-cell-proteomics.yaml
 # Step 3.
 conda activate scprep
-# Step 4.
+# Step 4. unpack the bundled data
+python prepare_data.py
+# Step 5.
 jupyter lab
 ```
 
@@ -41,9 +43,10 @@ jupyter lab
 
 For this to work Podman needs to be installed on the system.
 
-The `Dockerfile` in this repository can be used as follows to run the notebook: 
+The `Dockerfile` in this repository can be used as follows to run the notebook:
 
 - Build the Podman image with `podman build .`
+- Unpack the bundled data with `podman run -it -v "${PWD}":"/tscp/" tscp bash -c "cd tscp/; python prepare_data.py"`
 - Run the Podman image with `podman run -it -p 8888:8888 -v "${PWD}":"/tscp/" tscp`
 - Point the browser to link in shown in the terminal starting with `http://127.0.0.1:8888/`
 - Open the tscp folder in the Jupyter lab navigation, it contians the notebook.
@@ -52,17 +55,21 @@ The `Dockerfile` in this repository can be used as follows to run the notebook:
 While it has been tested with Podman, it may also work with Docker. To run it with Docker simply change the `podman` with `docker`.
 
 ### Non-interactive
+
 For a non-interactive reproduction one can use the following command:
 
 ```
 podman run -it -v "${PWD}":"/tscp/" tscp \
   bash -c \
     "sed -i 's/conda-env-tissue-py/python/' /tscp/TSP_cell_cycle_analysis.ipynb; \
+      python prepare_data.py; \
       python -m nbconvert \
       --execute \
       --to notebook /tscp/TSP_cell_cycle_analysis.ipynb \
       --output=/tscp/TSP_cell_cycle_analysis-reproduced.ipynb"
 ```
+
+The sed command above is necessary, because the jupyter notebook contains information about the Python environment used by the authors and this is not available.
 
 ## The budled data in `data.tar.gz`
 
