@@ -10,6 +10,8 @@ The analyses were performed in Python and heavily use [scanpy](https://scanpy.re
 
 The only requirements for the reproduciton are a conda installation and this repository.
 
+[reproduce-with-conda-and-containers.zip](https://github.com/fabianegli/singlecell_proteomics/archive/refs/tags/reproduce-with-conda-and-containers.zip) is the release that containins all information necessary for the reproduction of notebook.
+
 ### Step by Step instructions for `conda`
 
 1. Get a copy of this repository and open a shell in it.
