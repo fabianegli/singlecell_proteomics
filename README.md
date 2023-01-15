@@ -45,7 +45,7 @@ e.g. for Docker it should be possible to run the same analysis by simply changei
 
 ### Interactive
 
-For this to work Podman needs to be installed on the system.
+For this to work `podman` needs to be installed on the system.
 
 The `Dockerfile` in this repository can be used as follows to run the notebook:
 
