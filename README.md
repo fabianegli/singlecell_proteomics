@@ -77,15 +77,16 @@ The sed command above is necessary, because the jupyter notebook contains inform
 
 ## The budled data in `data.tar.gz`
 
-Much care has been given to the bundling of all data required for successful reproduction.
-The following sources were used:
+A bundle of all data required for successful reproduction has be compliled using the following sources:
 
 From PRIDE project [PXD024043] the files `20210919_DIANN_SingleCellOutput.pg_matrix_cellcyclepred.tsv` and `20210919_DIANN_SingleCellOutput.pg_matrix_notnormalized.tsv` in the
-https://ftp.pride.ebi.ac.uk/pride/data/archive/2022/02/PXD024043/DIANN1.8_SingleCells_CellCycle.7z archive licensed under the [Creative Commons Public Domain (CC0)](https://creativecommons.org/share-your-work/public-domain/cc0/).
+[DIANN1.8_SingleCells_CellCycle.7z](https://ftp.pride.ebi.ac.uk/pride/data/archive/2022/02/PXD024043/DIANN1.8_SingleCells_CellCycle.7z) archive available from PRIDE project PXD024043 licensed under the [Creative Commons Public Domain (CC0)](https://creativecommons.org/share-your-work/public-domain/cc0/).
 
 All other files in `data.tar.gz` originate from [Gene Expression Omnibus (GEO)](https://www.ncbi.nlm.nih.gov/gds/) as downloaded in January 2023.
-The directories `GSE129447_RAW` and `GSE142277_RAW` with their respective contents were downloaded from https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE129447&format=file and https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE142277&format=file respectively as compressed folders and their contents subsequently extracted.
-The files `GSM4226257_out_gene_exon_tagged.dge_exonsds_046.txt` and `GSM4226257_out_gene_exon_tagged.dge_intronsds_046.txt` in `GSM4226257_RAW` were individually downloaded and extracted from https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM4226257&format=file&file=GSM4226257%5Fout%5Fgene%5Fexon%5Ftagged%2Edge%5Fexonsds%5F046%2Etxt%2Egz and https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM4226257&format=file&file=GSM4226257%5Fout%5Fgene%5Fexon%5Ftagged%2Edge%5Fintronsds%5F046%2Etxt%2Egz respectively.
+- directory [`GSE129447_RAW`](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE129447&format=file)
+- directory [`GSE142277_RAW`](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE142277&format=file)
+- file [`GSM4226257_out_gene_exon_tagged.dge_exonsds_046.txt`](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM4226257&format=file&file=GSM4226257%5Fout%5Fgene%5Fexon%5Ftagged%2Edge%5Fexonsds%5F046%2Etxt%2Egz) in `GSM4226257_RAW`
+- file [`GSM4226257_out_gene_exon_tagged.dge_intronsds_046.txt`](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM4226257&format=file&file=GSM4226257%5Fout%5Fgene%5Fexon%5Ftagged%2Edge%5Fintronsds%5F046%2Etxt%2Egz) in `GSM4226257_RAW`
 
 The contents of `data.tar.gz`
 
