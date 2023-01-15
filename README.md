@@ -61,12 +61,16 @@ For a non-interactive reproduction one can use the following command:
 ```
 podman run -it -v "${PWD}":"/tscp/" tscp \
   bash -c \
-    "sed -i 's/conda-env-tissue-py/python/' /tscp/TSP_cell_cycle_analysis.ipynb; \
-      python prepare_data.py; \
-      python -m nbconvert \
+    "\
+    cd tscp; \
+    sed -i 's/conda-env-tissue-py/python/' TSP_cell_cycle_analysis.ipynb; \
+    python prepare_data.py; \
+    python -m nbconvert \
       --execute \
-      --to notebook /tscp/TSP_cell_cycle_analysis.ipynb \
-      --output=/tscp/TSP_cell_cycle_analysis-reproduced.ipynb"
+      --to notebook \
+      TSP_cell_cycle_analysis.ipynb \
+      --output=TSP_cell_cycle_analysis-reproduced.ipynb \
+    "
 ```
 
 The sed command above is necessary, because the jupyter notebook contains information about the Python environment used by the authors and this is not available.
