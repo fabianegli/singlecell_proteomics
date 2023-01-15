@@ -39,6 +39,10 @@ jupyter lab
 
 ## Step by Step instructions for Containers
 
+The reproduction with containers has been tested with [`podman`](https://podman.io/).
+It may also work with other containerization technologies that can build containers from Dockerfile like Docker or Singularity.
+e.g. for Docker it should be possible to run the same analysis by simply changeing `podman` to `docker`.
+
 ### Interactive
 
 For this to work Podman needs to be installed on the system.
@@ -51,8 +55,6 @@ The `Dockerfile` in this repository can be used as follows to run the notebook:
 - Point the browser to link in shown in the terminal starting with `http://127.0.0.1:8888/`
 - Open the tscp folder in the Jupyter lab navigation, it contians the notebook.
 - Open and run the notebook.
-
-While it has been tested with Podman, it may also work with Docker. To run it with Docker simply change the `podman` with `docker`.
 
 ### Non-interactive
 
