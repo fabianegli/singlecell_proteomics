@@ -1,4 +1,6 @@
-**NB: This is repository aims to provide everything needed to rerun the original Jupyter notebook. I am not connected to the [Theis Lab](https://github.com/theislab) and work on this repository in my free time. There is not guarantee - implied or expressed - that this repository will allow a perfect reproduction of the results.**
+**NB: This repository aims to provide everything needed to rerun the original Jupyter notebook.
+However, it comes without the guarantee - implied or expressed - that the information in this repository is sufficient to reproduce the rusults perfectly.
+I am not connected to the [Theis Lab](https://github.com/theislab) and work on this repository in my free time.**
 
 # Single-cell proteomics analysis in Python
 
@@ -8,7 +10,7 @@ The analyses were performed in Python and heavily use [scanpy](https://scanpy.re
 
 ### Requirements
 
-The only requirements for the reproduciton are a conda installation and this repository.
+The only requirements for the reproduciton are a computer with a conda installation or a container engine able to work with `Dockerfile` and this repository.
 
 [reproduce-with-conda-and-containers.zip](https://github.com/fabianegli/singlecell_proteomics/archive/refs/tags/reproduce-with-conda-and-containers.zip) is the release that containins all information necessary for the reproduction of notebook.
 
@@ -79,11 +81,11 @@ podman run -it -v "${PWD}":"/tscp/" tscp \
     "
 ```
 
-The sed command above is necessary, because the jupyter notebook contains information about the Python environment used by the authors and this is not available.
+The `sed` command above is necessary, because the jupyter notebook contains information about the Python environment used by the original authors which is not available.
 
 ## The budled data in `data.tar.gz`
 
-A bundle of all data required for successful reproduction has be compliled using the following sources:
+All data required for successful reproduction and not already available in this repository has be collected and compiled into a data bundle.
 
 From PRIDE project [PXD024043] the files `20210919_DIANN_SingleCellOutput.pg_matrix_cellcyclepred.tsv` and `20210919_DIANN_SingleCellOutput.pg_matrix_notnormalized.tsv` in the
 [DIANN1.8_SingleCells_CellCycle.7z](https://ftp.pride.ebi.ac.uk/pride/data/archive/2022/02/PXD024043/DIANN1.8_SingleCells_CellCycle.7z) archive available from PRIDE project PXD024043 licensed under the [Creative Commons Public Domain (CC0)](https://creativecommons.org/share-your-work/public-domain/cc0/).
@@ -126,7 +128,8 @@ The licenses of the bundled data is noted in the "The budled data in `data.tar.g
 
 ## Comments
 
-The effort to make this repository's code reproducible was carried out on MacOS 11.7.2. It has yet to be tested on other platforms.
-`conda-env-for-reproduction-on-MacOS1172.yaml` contains the exported conda environment - this file can be used to set up the environment exactly the same, but it will most probably not work if you use another OS than what generated it.
+The effort to make this repository's code reproducible was carried out on MacOS 11.7.2 (MacBook Pro late 2013) and PureOS (Librem 14). It has yet to be tested on other platforms.
+`conda-env-for-reproduction-on-MacOS1172.yaml` contains the exported conda environment - this file can be used to set up the environment exactly the same, but it will most probably not work if you use another OS than what generated it. Analogously, the `podman-conda-env-export.yaml` is a record ot the conda environment in a container running on PureOS.
 
 While this repository holds all the information to reproduce the plots, there might still be subtle differences that escaped or that are outside my purview to change.
+The plots also don't exactly match pixel for pixel - there are some matplotlib/seaborn specific settings which could not be reproduced.
